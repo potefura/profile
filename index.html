@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- ホーム画面に表示されるアプリ名 -->
+	<meta name="apple-mobile-web-app-title" content="WebPusher">
+	<!-- ホーム画面に表示されるアプリアイコン -->
+	<link rel="apple-touch-icon" href="icon-152x152.png">
+
+	<!-- ウェブアプリマニフェストの読み込み -->
+	<link rel="manifest" href="manifest.json">
+
+	<link rel='icon' type='image/png' href='favicon.png'>
+	
+    <title>kamichitaのプロフィール</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .profile {
+            margin-top: 50px;
+        }
+        img {
+    width: 200px;
+    height: auto; /* 高さを自動にすることで王冠まで表示される */
+    object-fit: contain; /* はみ出さずに収まるようにする */
+    background: transparent;
+}
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1, p {
+            margin: 10px;
+        }
+        a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <iframe src="https://discord.com/widget?id=1371403946270130228&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+    <div class="profile">
+        <!-- アイコンをGIFに変更 -->
+        <img src="https://raw.githubusercontent.com/gafu8383/guf/refs/heads/main/discord_fake_avatar_decorations_1750474769850.gif" alt="Kamichita icon" style="width: 288px; height: 288px: object-fit: contain;">
+        <h1>id: kamichita</h1>
+        <p>年齢: 非公開</p>
+        <p>ステータス: 暇</p>
+        <p>趣味: 荒らしが好き❤️</p>
+        <p>一言: おぜう万歳</p>
+    </div>
+
+    <!-- 音声再生（ループ・自動） -->
+    <audio id="bgm" src="https://raw.githubusercontent.com/gafu8383/guf/refs/heads/main/mao%20zedong%20propaganda%20music%20Red%20Sun%20in%20the%20Sky%202.mp3" autoplay loop></audio>
+
+
+<div id="subscription-area"></div>
+    <!-- 自動再生用スクリプト（スマホやブラウザ制限を一部回避） -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('bgm');
+            const play = () => {
+                audio.play().catch(() => {});
+            };
+            document.body.addEventListener('click', play, { once: true });
+        });
+  </script>
+									
+</body>
+</html>
